@@ -13,18 +13,12 @@ function verificarCaracteres(conteudo){
 async function extraCopy(element){
     try{
         await navigator.clipboard.writeText(document.getElementById('result-area').value);
-        a = document.createElement('a');
-        a.innerHTML = "Resultado copiado para área de transferência!";
-        a.classList.add('tooltip-copia');
-        coordenadas = document.getElementById('copy-icon').getBoundingClientRect();
-        a.style.left = coordenadas.x - 50;
-        a.style.top = coordenadas.y + 50;
-        document.querySelector('html').appendChild(a);
+        element.innerHTML = "Copiado!";
     }
     catch (err){
         alert('Erro ao copiar o texto!');
     }
-    setTimeout(function () {document.querySelector('html').removeChild(document.querySelector('.tooltip-copia'))},3000);
+    setTimeout(function () {element.innerHTML = 'Copiar'},3000);
 }
 function criptografar(){
     conteudo = document.getElementById("input-area").value;
@@ -33,7 +27,7 @@ function criptografar(){
         conteudo = String(conteudo).replace(RegExp(key[0],'g'),key[1]);
     }):alert(erro1);
     document.getElementById("result-area").innerHTML = verificarCaracteres(conteudo) ? conteudo:null;
-    document.getElementById("copy-icon").style.zIndex = verificarCaracteres(conteudo) ? 4:-1;
+    document.getElementById("copiar-btn").style.display = verificarCaracteres(conteudo) ? 'flex':'none';
 
 
     return 0
@@ -45,7 +39,7 @@ function descriptografar(){
         conteudo = String(conteudo).replace(RegExp(key[1],'g'),key[0]);
     }):alert(erro1);
     document.getElementById("result-area").innerHTML = verificarCaracteres(conteudo) ? conteudo:null;
-    document.getElementById("copy-icon").style.zIndex = verificarCaracteres(conteudo) ? 4:-1;
+    document.getElementById("copiar-btn").style.display = verificarCaracteres(conteudo) ? 'flex':'none';
     return 0
 }
 
