@@ -42,10 +42,3 @@ function descriptografar(){
     document.getElementById("copiar-btn").style.display = verificarCaracteres(conteudo) ? 'flex':'none';
     return 0
 }
-
-
-//"e" = 'enter'
-//"i" = 'imes'
-//"a" = "ai"
-//"o" = "ober"
-//'u' = "ufat"
