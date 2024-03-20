@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="challenge.css"/>
+        <script src="challenge.js"></script>
+    </head>
+    <body>
+        <div id="area-total">
+            <div id="area-esquerda">
+                <h1 id="header-esquerdo">Decodirickyficador de Texto</h1>
+                <textarea name="area-de-texto" id="input-area" type="text" placeholder="Digite o texto: "></textarea>
+                <div style="height:25%;position:relative;left:92%;top:-1%">
+                    <img id="copy-icon" onclick="extraCopy()" title="Copie o Resultado" src="copy-icon.jpg" width="32px" height="32px"></img>
+                    <textarea style="height: 100%;top: -25%;" name="area-de-texto" id="result-area" disabled=true type="text" placeholder="Resultado: "></textarea>
+                </div>
+                <div id="botoes-esquerdo">
+                    <div class="fundo-btn">
+                        <span id="criptografar-btn" onclick="criptografar()">Criptografar</span>
+                    </div>
+                    <div class="fundo-btn">
+                        <span id="descriptografar-btn" onclick="descriptografar()">Descriptografar</span>
+                    </div>
+                </div>
+            </div>
+            <div id="area-direita"><img src="rick 1.svg"></img</div>
+
+        </div>
+    </body>
+    <footer>
+
+    </footer>
+</html>
