@@ -11,7 +11,6 @@
                 <h1 id="header-esquerdo">Decodirickyficador de Texto</h1>
                 <textarea name="area-de-texto" id="input-area" type="text" placeholder="Digite o texto: "></textarea>
                 <div style="height:25%;position:relative;left:92%;top:-1%">
-                    <img id="copy-icon" onclick="extraCopy()" title="Copie o Resultado" src="copy-icon.jpg" width="32px" height="32px"></img>
                     <textarea style="height: 100%;top: -25%;" name="area-de-texto" id="result-area" disabled=true type="text" placeholder="Resultado: "></textarea>
                 </div>
                 <div id="botoes-esquerdo">
@@ -20,6 +19,9 @@
                     </div>
                     <div class="fundo-btn">
                         <span id="descriptografar-btn" onclick="descriptografar()">Descriptografar</span>
+                    </div>
+                    <div class="fundo-btn">
+                        <span id="copiar-btn" onclick="extraCopy(this)" style="position:relative;left:130%;display:none">Copiar</span>
                     </div>
                 </div>
             </div>
